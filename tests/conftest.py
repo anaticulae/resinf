@@ -8,3 +8,5 @@
 # =============================================================================
 
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
+
+resinf.setup(resinf.ROOT)
