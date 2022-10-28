@@ -10,7 +10,6 @@
 import os
 
 import utila
-import utilatest
 
 import resinf.configure
 
@@ -31,17 +30,17 @@ def generated(folder: str = None, project: str = None) -> str:
     return result
 
 
-def link(file, folder=None, project: str = None) -> str:
+def link(path, folder=None, project: str = None) -> str:
     """Determine link to expected generated path.
 
-    >>> link(resinf.path.BACHELOR111_PDF, project='poc/helm')
+    >>> import power
+    >>> link(power.path.BACHELOR111_PDF, project='poc/helm')
     '...helm/bachelor_bachelor111'
-    >>> link(resinf.path.BACHELOR111_PDF, folder='notoc', project='poc/helm')
+    >>> link(power.path.BACHELOR111_PDF, folder='notoc', project='poc/helm')
     '...helm/notoc/bachelor_bachelor111'
     """
-    mixed = [resinf.REPOSITORY, file]
-    simple = utilatest.simplify_testfile_names(mixed)[0]
-    result = os.path.join(generated(folder=folder, project=project), simple)
+    gen = generated(folder=folder, project=project)
+    result = os.path.join(gen, simple(path))
     result = utila.forward_slash(result)
     return result
 
@@ -49,12 +48,20 @@ def link(file, folder=None, project: str = None) -> str:
 def todo_new(path, pages: str = None, folder: str = None) -> tuple:
     """Determine todo entree as input for test data generator.
 
+    >>> import power
     >>> resinf.setup('poc', validate=False)
-    >>> todo_new(resinf.path.BACHELOR111_PDF, '5:10')
+    >>> todo_new(power.path.BACHELOR111_PDF, '5:10')
     ('...itory/bachelor/bachelor111.pdf', '...generated/poc/bachelor_bachelor111', '5:10')
     """
     pages = ':' if pages is None else pages
     path = utila.forward_slash(path)
     dest = link(path, folder=folder)
     result = (path, dest, pages)
+    return result
+
+
+def simple(path: str) -> str:
+    parent = utila.file_name(utila.path_parent(path))
+    filename = utila.file_name(path)
+    result = f'{parent}_{filename}'
     return result
