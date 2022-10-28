@@ -46,3 +46,7 @@ def getroot(project: str = None):
     projectname = os.path.split(project)[1]
     root = os.path.join(baw, 'generated', projectname)
     return root
+
+
+def worker_count():
+    return WORKER

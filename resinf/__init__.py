@@ -10,6 +10,7 @@
 import os
 
 from resinf.configure import setup
+from resinf.configure import worker_count
 from resinf.path import Todo
 from resinf.path import generated
 from resinf.path import link
