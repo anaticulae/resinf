@@ -43,7 +43,7 @@ else:
         HC_DISS193,
     ]
 
-    WRAPPER = power.link
+    WRAPPER = resinf.link
 
     def hclink(source, folder: str = None, project: str = None):
         generated = power.generated(folder=folder, project=project)
@@ -56,4 +56,4 @@ else:
             return hclink(file, folder=folder, project=project)
         return WRAPPER(file, folder=folder, project=project)
 
-    power.link = hcwrapper
+    resinf.link = hcwrapper
