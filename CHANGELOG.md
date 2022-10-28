@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.1.1 (2022-10-28)
+
+### Fix
+
+* use new resinf (480fe97cb4da)
+
 ## v0.1.0 (2022-10-28)
 
 ### Feature
