@@ -9,7 +9,7 @@
 
 import os
 
-from refinf.configure import setup
+from resinf.configure import setup
 
 __version__ = '0.0.0'
 

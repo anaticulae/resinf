@@ -18,7 +18,7 @@ ROOT = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(ROOT, 'README.md'), encoding='utf8') as fp:
     README = fp.read()
 
-with open(os.path.join(ROOT, 'refinf/__init__.py'), encoding='utf8') as fp:
+with open(os.path.join(ROOT, 'resinf/__init__.py'), encoding='utf8') as fp:
     VERSION = re.search(r'__version__ = \'(.*?)\'', fp.read()).group(1)
 
 with open(os.path.join(ROOT, "requirements.txt"), encoding='utf8') as fp:
@@ -33,9 +33,9 @@ if __name__ == "__main__":
         description='small one',
         install_requires=REQUIRES,
         long_description=README,
-        name='refinf',
+        name='resinf',
         platforms='any',
-        url='https://dev.package.checkitweg.de/refinf',
+        url='https://dev.package.checkitweg.de/resinf',
         version=VERSION,
         zip_safe=False,  # create 'zip'-file if True. Don't do it!
         classifiers=[
@@ -43,6 +43,6 @@ if __name__ == "__main__":
             'Programming Language :: Python :: 3.10',
         ],
         packages=[
-            'refinf',
+            'resinf',
         ],
     )

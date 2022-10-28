@@ -7,6 +7,8 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import resinf
+
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 
 resinf.setup(resinf.ROOT)
