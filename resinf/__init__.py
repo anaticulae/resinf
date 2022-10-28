@@ -18,6 +18,8 @@ from resinf.path import simple
 from resinf.path import todo
 from resinf.path import todo_new
 
+from resinf.hard import *  # isort:skip
+
 __version__ = '0.0.0'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
