@@ -7,11 +7,14 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import collections
 import os
 
 import utila
 
 import resinf.configure
+
+Todo = collections.namedtuple('Todo', 'resource name pages config')
 
 
 def generated(folder: str = None, project: str = None) -> str:
@@ -57,6 +60,41 @@ def todo_new(path, pages: str = None, folder: str = None) -> tuple:
     path = utila.forward_slash(path)
     dest = link(path, folder=folder)
     result = (path, dest, pages)
+    return result
+
+
+def todo(resource: str, name: str = None, pages: tuple = None, **kwargs):
+    """\
+    >>> todo('resource/master116.pdf', pages=(1,2, 3), groupme=True)
+    Todo(resource='resource/master116.pdf', name='resource_master116', pages=(1, 2, 3), config={'groupme': True})
+    >>> todo('resource/master116.pdf', name='master_master116', pages=None)
+    Todo(resource='resource/master116.pdf', name='master_master116', pages=None, config=None)
+    """
+    config = kwargs if kwargs else None
+    if name is None:
+        name = simple(resource)
+    result = Todo(resource, name=name, pages=pages, config=config)
+    return result
+
+
+def prepare_files(files, pages: tuple = (5, 6)) -> list:
+    """\
+    >>> prepare_files(['resource/master116.pdf', ('resource/mitpage', (1, 2, 3))])
+    [Todo(resource='resource/master116.pdf',...pages=(5, 6),...Todo(...pages=(1, 2, 3), config=None)]
+    >>> prepare_files([Todo('resource/master116.pdf', 'master116', 116, {})])
+    [Todo(resource='resource/master116.pdf', name='master116', pages=116, config={})]
+    """
+    result = []
+    for item in files:
+        if isinstance(item, Todo):
+            result.append(item)
+            continue
+        if isinstance(item, str):
+            result.append(todo(item, pages=pages))
+            continue
+        if isinstance(item, tuple):
+            result.append(todo(resource=item[0], pages=item[1]))
+            continue
     return result
 
 
