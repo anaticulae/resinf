@@ -77,11 +77,11 @@ def todo(resource: str, name: str = None, pages: tuple = None, **kwargs):
     return result
 
 
-def prepare_files(files, pages: tuple = (5, 6)) -> list:
+def prepares(files, pages: tuple = (5, 6)) -> list:
     """\
-    >>> prepare_files(['resource/master116.pdf', ('resource/mitpage', (1, 2, 3))])
+    >>> prepares(['resource/master116.pdf', ('resource/mitpage', (1, 2, 3))])
     [Todo(resource='resource/master116.pdf',...pages=(5, 6),...Todo(...pages=(1, 2, 3), config=None)]
-    >>> prepare_files([Todo('resource/master116.pdf', 'master116', 116, {})])
+    >>> prepares([Todo('resource/master116.pdf', 'master116', 116, {})])
     [Todo(resource='resource/master116.pdf', name='master116', pages=116, config={})]
     """
     result = []

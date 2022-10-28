@@ -10,6 +10,13 @@
 import os
 
 from resinf.configure import setup
+from resinf.path import Todo
+from resinf.path import generated
+from resinf.path import link
+from resinf.path import prepares
+from resinf.path import simple
+from resinf.path import todo
+from resinf.path import todo_new
 
 __version__ = '0.0.0'
 
