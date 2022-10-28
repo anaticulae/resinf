@@ -9,6 +9,8 @@
 
 import utila
 
+import resinf
+
 HC_BACH106 = None
 HC_BOOK636 = None
 HC_DISS128 = None
@@ -45,9 +47,7 @@ else:
 
     def hclink(source, folder: str = None, project: str = None):
         generated = power.generated(folder=folder, project=project)
-        fname = utila.file_name(source)
-        parent = utila.file_name(utila.path_parent(source))
-        directory = f'{parent}_{fname}'
+        directory = resinf.simple(source)
         result = utila.join(generated, directory)
         return result
 
