@@ -21,6 +21,6 @@ from resinf.path import todo_new
 
 from resinf.hard import *  # isort:skip
 
-__version__ = '0.1.1'
+__version__ = '0.2.0'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))

@@ -2,6 +2,16 @@
 
 Every noteable change is logged here.
 
+## v0.2.0 (2022-10-29)
+
+### Feature
+
+* add worker count lookup (d456d936c8d5)
+
+### Fix
+
+* power is not required (986c857229d5)
+
 ## v0.1.1 (2022-10-28)
 
 ### Fix
