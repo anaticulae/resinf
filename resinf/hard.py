@@ -22,7 +22,6 @@ HC_ALL = None
 
 try:
     import hardcore.path
-    import power
 except ModuleNotFoundError:
     utila.debug('install hardcore to access HC_* resources')
 else:
@@ -46,7 +45,7 @@ else:
     WRAPPER = resinf.link
 
     def hclink(source, folder: str = None, project: str = None):
-        generated = power.generated(folder=folder, project=project)
+        generated = resinf.generated(folder=folder, project=project)
         directory = resinf.simple(source)
         result = utila.join(generated, directory)
         return result
