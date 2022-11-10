@@ -2,6 +2,16 @@
 
 Every noteable change is logged here.
 
+## v0.3.0 (2022-11-10)
+
+### Feature
+
+* add pdf from power (2c9ee50da039)
+
+### Chore
+
+* upgrade requirements.txt (43bed177edd6)
+
 ## v0.2.0 (2022-10-29)
 
 ### Feature
