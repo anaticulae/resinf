@@ -103,3 +103,16 @@ def simple(path: str) -> str:
     filename = utila.file_name(path)
     result = f'{parent}_{filename}'
     return result
+
+
+def pdf(item):
+    """Determine file path for path page tuple.
+
+    >>> import power; pdf((power.DISS173_PDF, '10:45'))
+    '...diss173.pdf'
+    >>> import power; pdf(power.DISS173_PDF)
+    '...diss173.pdf'
+    """
+    if not isinstance(item, str):
+        return item[0]
+    return item

@@ -14,6 +14,7 @@ from resinf.configure import worker_count
 from resinf.path import Todo
 from resinf.path import generated
 from resinf.path import link
+from resinf.path import pdf
 from resinf.path import prepares
 from resinf.path import simple
 from resinf.path import todo
