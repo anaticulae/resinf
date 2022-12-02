@@ -1,56 +1,53 @@
-pipeline{
-    agent{
-        docker{
-            image '169.254.149.20:6001/arch_python_baw:0.15.0'
-            args  '-v $WORKSPACE:/var/workdir'
+@Library('caelum@108f81811f363bfda4a3fd6110a5c190e56b2fa0') _
+
+pipeline {
+    agent {
+        docker {
+            image '169.254.149.20:6001/arch_python_git_baw:v1.26.0'
         }
     }
-
-    parameters{
-        string(name: 'BRANCH', defaultValue: 'master')
-        booleanParam(name: 'RELEASE', defaultValue: false)
-    }
-
     stages{
-        stage('sync'){
-            steps{
-                sh 'baw sync all'
-                sh 'baw sh "pip install ."'
-            }
+        stage('setup'){
+            steps{script{baw.setup()}}
         }
-        stage('doctest'){
-            steps{
-                sh 'baw test docs -n1'
-            }
-        }
-        stage('fast'){
-            steps{
-                sh 'baw test fast -n5'
-            }
-        }
-        stage('long'){
-            steps{
-                sh 'baw test long -n8'
-            }
-        }
-        stage('lint'){
-            steps{
-                sh 'baw lint'
+        stage('test'){
+            failFast true
+            parallel{
+                stage('doc'){
+                    steps{
+                        script{baw.doctest()}
+                    }
+                }
+                stage('fast'){
+                    steps{
+                        script{baw.fast(2)}
+                    }
+                }
             }
         }
         stage('all'){
             steps{
-                sh 'baw test all -n16 --cov --junit_xml=report.xml'
-                junit '**/report.xml'
+                script{baw.all(2)}
+            }
+        }
+        stage('quality'){
+            failFast true
+            parallel{
+                stage('lint'){
+                    steps{
+                        script{baw.lint()}
+                    }
+                }
+                stage('format'){
+                    steps{
+                        script{baw.format()}
+                    }
+                }
             }
         }
         stage('release'){
-            when {
-                expression { return params.RELEASE }
-            }
             steps{
-                sh 'baw install && baw release && baw publish'
-                // TODO: GIT COMMIT?
+                script{publish.release()}
             }
         }
     }
