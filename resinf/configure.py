@@ -21,8 +21,13 @@ def setup(root: str, worker: int = 6, validate: bool = True):
         root(str): path to root of resource
         worker(int): select number of used processes, use -1 for os.cpu_count
         validate(bool): if True check that `root` exists
+
+    >>> setup(__file__)
     """
     assert os.path.exists(root) or not validate, str(root)
+    # allow to setup from any existing file
+    if validate:
+        root = utila.baw_root(root)
     global PROJECT  # pylint:disable=global-statement
     PROJECT = root
     # required to use updated PROJECT of getroot
