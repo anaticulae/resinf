@@ -9,6 +9,7 @@
 
 import os
 
+from resinf.configure import mainpackage
 from resinf.configure import setup
 from resinf.configure import worker_count
 from resinf.path import Todo

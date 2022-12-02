@@ -31,6 +31,15 @@ def setup(root: str, worker: int = 6, validate: bool = True):
     WORKER = os.cpu_count if worker == -1 else worker
 
 
+def mainpackage(root: str) -> str:
+    """\
+    >>> mainpackage(__file__)
+    'resinf'
+    """
+    name = utila.baw_name(root)
+    return name
+
+
 GENERATED = 'resources/generated'
 
 
