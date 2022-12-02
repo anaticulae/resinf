@@ -2,6 +2,19 @@
 
 Every noteable change is logged here.
 
+## v0.4.0 (2022-12-02)
+
+### Feature
+
+* determine root automatically (8fbd167a80b9)
+* add method to determine main package (f17cc2958487)
+
+### Chore
+
+* upgrade pipeline (2b835d34a21a)
+* use utila quick installer (0fc95347fbea)
+* upgrade requirements.txt (ebcd190f1e76)
+
 ## v0.3.0 (2022-11-10)
 
 ### Feature
