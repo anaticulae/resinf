@@ -69,6 +69,9 @@ def todo(resource: str, name: str = None, pages: tuple = None, **kwargs):
     Todo(resource='resource/master116.pdf', name='resource_master116', pages=(1, 2, 3), config={'groupme': True})
     >>> todo('resource/master116.pdf', name='master_master116', pages=None)
     Todo(resource='resource/master116.pdf', name='master_master116', pages=None, config=None)
+    >>> import power; todo(power.MASTER116_PDF, caption=True, codero=True, figureo=True, groupme=True,
+    ... magic=True, cleanup=True, tablero=True)
+    Todo(resource='...master116.pdf', name='master_master116', pages=None, config={'caption': True,...'tablero': True})
     """
     config = kwargs if kwargs else None
     if name is None:
