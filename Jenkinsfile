@@ -7,6 +7,9 @@ pipeline {
         }
     }
     stages{
+        stage('integrate'){
+            steps{script{baw.integrate()}}
+        }
         stage('setup'){
             steps{script{baw.setup()}}
         }
@@ -45,9 +48,19 @@ pipeline {
                 }
             }
         }
+        stage('pre-release'){
+            steps{
+                script{
+                    baw.pre()
+                }
+            }
+        }
         stage('release'){
             steps{
-                script{publish.release()}
+                script{
+                    publish.release()
+                    baw.rebase()
+                }
             }
         }
     }
