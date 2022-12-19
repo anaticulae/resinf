@@ -123,3 +123,21 @@ def pdf(item):
     if not isinstance(item, str):
         return item[0]
     return item
+
+
+def bypages(item: Todo) -> int:
+    maxpage = utila.parse_ints(item.name)
+    if not maxpage:
+        return 256
+    pagepattern = item.pages
+    if isinstance(pagepattern, tuple):
+        return len(pagepattern)
+    maxpage: int = int(maxpage[-1])
+    if pagepattern in {None, ':'}:
+        return maxpage
+    parsed = utila.parse_pages(
+        pagepattern,
+        pagecount=maxpage,
+    )
+    count = len(parsed)
+    return count

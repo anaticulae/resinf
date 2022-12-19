@@ -13,6 +13,7 @@ from resinf.configure import mainpackage
 from resinf.configure import setup
 from resinf.configure import worker_count
 from resinf.path import Todo
+from resinf.path import bypages
 from resinf.path import generated
 from resinf.path import link
 from resinf.path import pdf
