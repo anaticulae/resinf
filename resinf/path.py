@@ -102,6 +102,10 @@ def prepares(files, pages: tuple = (5, 6)) -> list:
 
 
 def simple(path: str) -> str:
+    """\
+    >>> simple('repository/bachelor/bachelor090.pdf')
+    'bachelor_bachelor090'
+    """
     parent = utila.file_name(utila.path_parent(path))
     filename = utila.file_name(path)
     result = f'{parent}_{filename}'
