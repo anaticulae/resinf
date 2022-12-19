@@ -1,9 +1,9 @@
-@Library('caelum@108f81811f363bfda4a3fd6110a5c190e56b2fa0') _
+@Library('caelum@refs/tags/v0.12.0') _
 
 pipeline {
     agent {
         docker {
-            image '169.254.149.20:6001/arch_python_git_baw:v1.26.0'
+            image '169.254.149.20:6001/arch_python_git_baw:v1.45.0'
         }
     }
     stages{
