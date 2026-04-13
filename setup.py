@@ -8,9 +8,9 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import utilo
 
 PACKAGES = ['resinf']
 
 if __name__ == "__main__":
-    utila.install(__file__)
+    utilo.install(__file__)

@@ -9,7 +9,7 @@
 
 import os
 
-import utila
+import utilo
 
 PROJECT = None
 WORKER = None
@@ -27,7 +27,7 @@ def setup(root: str, worker: int = 6, validate: bool = True):
     assert os.path.exists(root) or not validate, str(root)
     # allow to setup from any existing file
     if validate:
-        root = utila.baw_root(root)
+        root = utilo.baw_root(root)
     global PROJECT  # pylint:disable=global-statement
     PROJECT = root
     # required to use updated PROJECT of getroot
@@ -41,7 +41,7 @@ def mainpackage(root: str) -> str:
     >>> mainpackage(__file__)
     'resinf'
     """
-    name = utila.baw_name(root)
+    name = utilo.baw_name(root)
     return name
 
 
@@ -54,8 +54,8 @@ def getroot(project: str = None):
     baw = os.environ.get('BAW', None)
     if not baw:
         # TODO: REMOVE OLD BEHAVIOR
-        root = os.path.join(utila.tmp(project), GENERATED)
-        utila.error(f'DEFINE $BAW USE OLD PATH INSTEAD: {root}')
+        root = os.path.join(utilo.tmp(project), GENERATED)
+        utilo.error(f'DEFINE $BAW USE OLD PATH INSTEAD: {root}')
         return root
     projectname = os.path.split(project)[1]
     root = os.path.join(baw, 'generated', projectname)

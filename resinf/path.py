@@ -10,7 +10,7 @@
 import collections
 import os
 
-import utila
+import utilo
 
 import resinf.configure
 
@@ -29,7 +29,7 @@ def generated(folder: str = None, project: str = None) -> str:
     path = resinf.configure.getroot(project=project)
     if folder:
         path = os.path.join(path, folder)
-    result = utila.forward_slash(path)
+    result = utilo.forward_slash(path)
     return result
 
 
@@ -44,7 +44,7 @@ def link(path, folder=None, project: str = None) -> str:
     """
     gen = generated(folder=folder, project=project)
     result = os.path.join(gen, simple(path))
-    result = utila.forward_slash(result)
+    result = utilo.forward_slash(result)
     return result
 
 
@@ -57,7 +57,7 @@ def todo_new(path, pages: str = None, folder: str = None) -> tuple:
     ('...itory/bachelor/bachelor111.pdf', '...generated/poc/bachelor_bachelor111', '5:10')
     """
     pages = ':' if pages is None else pages
-    path = utila.forward_slash(path)
+    path = utilo.forward_slash(path)
     dest = link(path, folder=folder)
     result = (path, dest, pages)
     return result
@@ -106,8 +106,8 @@ def simple(path: str) -> str:
     >>> simple('repository/bachelor/bachelor090.pdf')
     'bachelor_bachelor090'
     """
-    parent = utila.file_name(utila.path_parent(path))
-    filename = utila.file_name(path)
+    parent = utilo.file_name(utilo.path_parent(path))
+    filename = utilo.file_name(path)
     result = f'{parent}_{filename}'
     return result
 
@@ -126,7 +126,7 @@ def pdf(item):
 
 
 def bypages(item: Todo) -> int:
-    maxpage = utila.parse_ints(item.name)
+    maxpage = utilo.parse_ints(item.name)
     if not maxpage:
         return 256
     pagepattern = item.pages
@@ -135,7 +135,7 @@ def bypages(item: Todo) -> int:
     maxpage: int = int(maxpage[-1])
     if pagepattern in {None, ':'}:
         return maxpage
-    parsed = utila.parse_pages(
+    parsed = utilo.parse_pages(
         pagepattern,
         pagecount=maxpage,
     )

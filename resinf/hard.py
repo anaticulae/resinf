@@ -7,7 +7,7 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import utilo
 
 import resinf
 
@@ -23,7 +23,7 @@ HC_ALL = None
 try:
     import hardcore.path
 except ModuleNotFoundError:
-    utila.debug('install hardcore to access HC_* resources')
+    utilo.debug('install hardcore to access HC_* resources')
 else:
     HC_BACH106 = hardcore.path.BACHELOR106
     HC_BOOK636 = hardcore.path.BOOK636
@@ -47,7 +47,7 @@ else:
     def hclink(source, folder: str = None, project: str = None):
         generated = resinf.generated(folder=folder, project=project)
         directory = resinf.simple(source)
-        result = utila.join(generated, directory)
+        result = utilo.join(generated, directory)
         return result
 
     def hcwrapper(file, folder=None, project: str = None) -> str:

@@ -9,4 +9,4 @@
 
 power>=2.20.1<3.0.0
 hardcore>=0.8.1<1.0.0
-utilatest>=0.26.1<1.0.0
+utilotest>=0.26.1<1.0.0
