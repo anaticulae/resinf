@@ -16,7 +16,7 @@ authors = [
 ]
 
 dependencies = [
-    "utilo>=2.107.3,<3.0.0",
+    "utilo>=2.107.4,<3.0.0",
 ]
 
 # Optional but recommended metadata
