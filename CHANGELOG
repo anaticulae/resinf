@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.0.2 (2026-04-13)
+
+### Chores
+
+- **make**: Adjust make
+  ([`f16bd11`](https://github.com/anaticulae/resinf/commit/f16bd11894bfe52aadacff02272c0c5c1c9aa714))
+
+
 ## v1.0.1 (2026-04-13)
 
 ### Chores
