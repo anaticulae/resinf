@@ -18,7 +18,7 @@ HC_DISS148 = None
 HC_DISS166 = None
 HC_DISS171 = None
 HC_DISS193 = None
-HC_ALL = None
+HC_ALL = None  # pylint:disable=invalid-name
 
 try:
     import hardcore.path
@@ -32,7 +32,7 @@ else:
     HC_DISS166 = hardcore.path.DISS166
     HC_DISS171 = hardcore.path.DISS171
     HC_DISS193 = hardcore.path.DISS193
-    HC_ALL = [
+    HC_ALL = [  # pylint:disable=invalid-name
         HC_BACH106,
         HC_BOOK636,
         HC_DISS128,
