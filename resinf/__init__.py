@@ -7,6 +7,7 @@
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
 
+import importlib.metadata
 import os
 
 from resinf.configure import mainpackage
@@ -24,6 +25,6 @@ from resinf.path import todo_new
 
 from resinf.hard import *  # isort:skip
 
-__version__ = '0.4.0'
+__version__ = importlib.metadata.version('resinf')
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
