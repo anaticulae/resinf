@@ -1,6 +1,172 @@
 # CHANGELOG
 
 
+## v1.0.1 (2026-04-13)
+
+### Chores
+
+- **docker**: Adjust make
+  ([`635891e`](https://github.com/anaticulae/resinf/commit/635891ee1baeb9bcb4a1d9a03d5a956e4e3dc8d3))
+
+
 ## v1.0.0 (2026-04-13)
+
+### Chores
+
+- **github**: Add .github
+  ([`2ae999b`](https://github.com/anaticulae/resinf/commit/2ae999ba75849c48e61597b7e666bb20c35c4837))
+
+- **Jenkins**: Add integration, rebase and pre-release step
+  ([`3cde2d9`](https://github.com/anaticulae/resinf/commit/3cde2d9a29c2b5b5c34db8f8f6a36ce12eeeecf6))
+
+- **jenkins**: Remove outdated jenkins file
+  ([`b1b385a`](https://github.com/anaticulae/resinf/commit/b1b385a454da00d4d77513a415a66352944e4d52))
+
+- **Jenkins**: Upgrade pipe
+  ([`e3ac975`](https://github.com/anaticulae/resinf/commit/e3ac975cd24956fdf717d47ce9a18be2a6cf2312))
+
+- **make**: Add dockerfile
+  ([`66cdb1b`](https://github.com/anaticulae/resinf/commit/66cdb1bfe3af8a5f04a8b02cfbdee0cfe89f6a92))
+
+- **pyproject**: Add modern approach
+  ([`7b1a789`](https://github.com/anaticulae/resinf/commit/7b1a789ebb9b969894230d8bf2b6d33ccd01e8c1))
+
+- **requirements**: Remove outdated files
+  ([`c7aa0c7`](https://github.com/anaticulae/resinf/commit/c7aa0c7e0bdf41fc6d9bc861909e19bbdb29ef5a))
+
+- **requirements**: Upgrade requirements.txt
+  ([`495cd35`](https://github.com/anaticulae/resinf/commit/495cd356def4c954b791a74e21269d9f169d2556))
+
+### Code Style
+
+- **hard**: Fix linter warnings
+  ([`c55bb54`](https://github.com/anaticulae/resinf/commit/c55bb5459e5ec2505f66d1a1ed2b09b0578a4f36))
+
+### Features
+
+- **path**: Add bypages converter
+  ([`895ecc8`](https://github.com/anaticulae/resinf/commit/895ecc82a30480a6eaf95fb872f518d8616b20f0))
+
+### Refactoring
+
+- **rename**: Rename package
+  ([`8ad9b4d`](https://github.com/anaticulae/resinf/commit/8ad9b4db7f04e0297e2a4197c4c9c34587b4f030))
+
+### Testing
+
+- **disable**: Disable unit tests
+  ([`144d9a6`](https://github.com/anaticulae/resinf/commit/144d9a6cac58319fa2b752975f70eaedb41e272b))
+
+- **move**: Move doctest from genex
+  ([`0797649`](https://github.com/anaticulae/resinf/commit/07976498e63fbd11c25d018a20a46b56f1f0fd0d))
+
+- **path**: Increase test coverage
+  ([`fd1731e`](https://github.com/anaticulae/resinf/commit/fd1731ef6edea15e6e00b92e1a7be92b76e1010d))
+
+
+## v0.4.0 (2022-12-02)
+
+### Chores
+
+- **Jenkins**: Upgrade pipeline
+  ([`2b835d3`](https://github.com/anaticulae/resinf/commit/2b835d34a21ada8461232e5fbb5e63ed466a97e5))
+
+- **requirements**: Upgrade requirements.txt
+  ([`ebcd190`](https://github.com/anaticulae/resinf/commit/ebcd190f1e76d8b0a3683c5a925f0778f335d3d6))
+
+- **setup**: Use utila quick installer
+  ([`0fc9534`](https://github.com/anaticulae/resinf/commit/0fc95347fbeacbb6a05feff9492a6ae9962af186))
+
+### Code Style
+
+- **readme**: Remove file type
+  ([`aae86b7`](https://github.com/anaticulae/resinf/commit/aae86b7dadc0c0e10f696e5310105c30e7b25adf))
+
+### Features
+
+- **config**: Add method to determine main package
+  ([`f17cc29`](https://github.com/anaticulae/resinf/commit/f17cc2958487823054b1cd20cc6a4140183aa7c0))
+
+- **config**: Determine root automatically
+  ([`8fbd167`](https://github.com/anaticulae/resinf/commit/8fbd167a80b9d09917b2a0160134ced8ed12572d))
+
+
+## v0.3.0 (2022-11-10)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`43bed17`](https://github.com/anaticulae/resinf/commit/43bed177edd682285ee20b2b433ac4e01cc5126e))
+
+### Features
+
+- **path**: Add pdf from power
+  ([`2c9ee50`](https://github.com/anaticulae/resinf/commit/2c9ee50da039205aae4b6d4a278ffe10e1dc7f4a))
+
+
+## v0.2.0 (2022-10-29)
+
+### Bug Fixes
+
+- **hard**: Power is not required
+  ([`986c857`](https://github.com/anaticulae/resinf/commit/986c857229d57d3b8a84a2bf69ee884251c2834c))
+
+### Features
+
+- **config**: Add worker count lookup
+  ([`d456d93`](https://github.com/anaticulae/resinf/commit/d456d936c8d57a5b457cab7b8b6df815f53f5bfe))
+
+
+## v0.1.1 (2022-10-28)
+
+### Bug Fixes
+
+- **hard**: Use new resinf
+  ([`480fe97`](https://github.com/anaticulae/resinf/commit/480fe97cb4da01ac9109c901a3cdad6b8f9f8fa2))
+
+
+## v0.1.0 (2022-10-28)
+
+### Chores
+
+- **Jenkins**: Add Jenkinsfile
+  ([`a016547`](https://github.com/anaticulae/resinf/commit/a016547dee3e433ccf16804306f49ea92fb4c2ee))
+
+- **project**: Adjust project name
+  ([`c8086a2`](https://github.com/anaticulae/resinf/commit/c8086a2ac2371f7e0679e2ff342fcb365501ecc6))
+
+- **requirements**: Add missing dev resource
+  ([`fa57802`](https://github.com/anaticulae/resinf/commit/fa57802a3af056542d27b703404575b574064454))
+
+- **requirements**: Add utila
+  ([`69d87fe`](https://github.com/anaticulae/resinf/commit/69d87fe81fc5d1638902b611f4958bd8118a49d4))
+
+### Features
+
+- **API**: Adjust public interface
+  ([`e527020`](https://github.com/anaticulae/resinf/commit/e527020d54b4311ca16d0cc01bdbf8f1ecfb8803))
+
+- **config**: Move configure step from power
+  ([`7137fdc`](https://github.com/anaticulae/resinf/commit/7137fdc0a496012060aa8bc4c94864f5676f6304))
+
+- **hard**: Move hardcore path access
+  ([`5502e86`](https://github.com/anaticulae/resinf/commit/5502e86a79b708165dfe0c91c50c755a67dab0cf))
+
+- **path**: Move path determiner
+  ([`d6c46fa`](https://github.com/anaticulae/resinf/commit/d6c46fa2554b257e9692470f72daaedd26e9efee))
+
+- **path**: Move some methods from power
+  ([`79fca88`](https://github.com/anaticulae/resinf/commit/79fca8824a024d724dadf6bc2173d35747fc69ff))
+
+- **path**: Simplify path determiner
+  ([`a0f8fa0`](https://github.com/anaticulae/resinf/commit/a0f8fa0dfb942a13f04a5f8995935fb8d16a9258))
+
+### Refactoring
+
+- **hard**: Simplify code
+  ([`8d0d859`](https://github.com/anaticulae/resinf/commit/8d0d85916d08f1011f250adfe478b9a3499a58f2))
+
+
+## v0.0.0 (2022-10-28)
 
 - Initial Release
