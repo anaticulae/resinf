@@ -11,7 +11,7 @@ docker-build:
 	docker build -t $(IMAGE) .
 
 docker-build-base:
-	docker build -f env/base/Dockerfile -t $(IMAGE_BASE_NAME) .
+	docker build -t $(IMAGE_BASE_NAME) .
 
 docker-upload-base:
 	docker push $(IMAGE_BASE_NAME)
