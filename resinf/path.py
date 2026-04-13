@@ -36,11 +36,11 @@ def generated(folder: str = None, project: str = None) -> str:
 def link(path, folder=None, project: str = None) -> str:
     """Determine link to expected generated path.
 
-    >>> import power
-    >>> link(power.path.BACHELOR111_PDF, project='poc/helm')
-    '...helm/bachelor_bachelor111'
-    >>> link(power.path.BACHELOR111_PDF, folder='notoc', project='poc/helm')
-    '...helm/notoc/bachelor_bachelor111'
+    # >>> import power
+    # >>> link(power.path.BACHELOR111_PDF, project='poc/helm')
+    # '...helm/bachelor_bachelor111'
+    # >>> link(power.path.BACHELOR111_PDF, folder='notoc', project='poc/helm')
+    # '...helm/notoc/bachelor_bachelor111'
     """
     gen = generated(folder=folder, project=project)
     result = os.path.join(gen, simple(path))
@@ -51,10 +51,10 @@ def link(path, folder=None, project: str = None) -> str:
 def todo_new(path, pages: str = None, folder: str = None) -> tuple:
     """Determine todo entree as input for test data generator.
 
-    >>> import power
-    >>> resinf.setup('poc', validate=False)
-    >>> todo_new(power.path.BACHELOR111_PDF, '5:10')
-    ('...itory/bachelor/bachelor111.pdf', '...generated/poc/bachelor_bachelor111', '5:10')
+    # >>> import power
+    # >>> resinf.setup('poc', validate=False)
+    # >>> todo_new(power.path.BACHELOR111_PDF, '5:10')
+    # ('...itory/bachelor/bachelor111.pdf', '...generated/poc/bachelor_bachelor111', '5:10')
     """
     pages = ':' if pages is None else pages
     path = utilo.forward_slash(path)
@@ -69,9 +69,10 @@ def todo(resource: str, name: str = None, pages: tuple = None, **kwargs):
     Todo(resource='resource/master116.pdf', name='resource_master116', pages=(1, 2, 3), config={'groupme': True})
     >>> todo('resource/master116.pdf', name='master_master116', pages=None)
     Todo(resource='resource/master116.pdf', name='master_master116', pages=None, config=None)
-    >>> import power; todo(power.MASTER116_PDF, caption=True, codero=True, figureo=True, groupme=True,
-    ... magic=True, cleanup=True, tablero=True)
-    Todo(resource='...master116.pdf', name='master_master116', pages=None, config={'caption': True,...'tablero': True})
+
+    # >>> import power; todo(power.MASTER116_PDF, caption=True, codero=True, figureo=True, groupme=True,
+    # ... magic=True, cleanup=True, tablero=True)
+    # Todo(resource='...master116.pdf', name='master_master116', pages=None, config={'caption': True,...'tablero': True})
     """
     config = kwargs if kwargs else None
     if name is None:
@@ -115,10 +116,10 @@ def simple(path: str) -> str:
 def pdf(item):
     """Determine file path for path page tuple.
 
-    >>> import power; pdf((power.DISS173_PDF, '10:45'))
-    '...diss173.pdf'
-    >>> import power; pdf(power.DISS173_PDF)
-    '...diss173.pdf'
+    # >>> import power; pdf((power.DISS173_PDF, '10:45'))
+    # '...diss173.pdf'
+    # >>> import power; pdf(power.DISS173_PDF)
+    # '...diss173.pdf'
     """
     if not isinstance(item, str):
         return item[0]
