@@ -1,62 +1,6 @@
-# Changelog
+# CHANGELOG
 
-Every noteable change is logged here.
 
-## v0.4.0 (2022-12-02)
+## v1.0.0 (2026-04-13)
 
-### Feature
-
-* determine root automatically (8fbd167a80b9)
-* add method to determine main package (f17cc2958487)
-
-### Chore
-
-* upgrade pipeline (2b835d34a21a)
-* use utila quick installer (0fc95347fbea)
-* upgrade requirements.txt (ebcd190f1e76)
-
-## v0.3.0 (2022-11-10)
-
-### Feature
-
-* add pdf from power (2c9ee50da039)
-
-### Chore
-
-* upgrade requirements.txt (43bed177edd6)
-
-## v0.2.0 (2022-10-29)
-
-### Feature
-
-* add worker count lookup (d456d936c8d5)
-
-### Fix
-
-* power is not required (986c857229d5)
-
-## v0.1.1 (2022-10-28)
-
-### Fix
-
-* use new resinf (480fe97cb4da)
-
-## v0.1.0 (2022-10-28)
-
-### Feature
-
-* move hardcore path access (5502e86a79b7)
-* adjust public interface (e527020d54b4)
-* move some methods from power (79fca8824a02)
-* simplify path determiner (a0f8fa0dfb94)
-* move path determiner (d6c46fa2554b)
-* move configure step from power (7137fdc0a496)
-
-### Chore
-
-* adjust project name (c8086a2ac237)
-* add missing dev resource (fa57802a3af0)
-* add utila (69d87fe81fc5)
-* add Jenkinsfile (a016547dee3e)
-
-## v0.0.0 initial release
+- Initial Release
