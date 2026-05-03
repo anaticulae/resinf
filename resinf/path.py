@@ -54,7 +54,7 @@ def todo_new(path, pages: str = None, folder: str = None) -> tuple:
     >>> import hoverpower
     >>> resinf.setup('poc', validate=False)
     >>> todo_new(hoverpower.path.BACHELOR111_PDF, '5:10')
-    ('...itory/bachelor/bachelor111.pdf', '...generated/poc/bachelor_bachelor111', '5:10')
+    ('...bachelor/bachelor111.pdf', '...generated/poc/bachelor_bachelor111', '5:10')
     """
     pages = ':' if pages is None else pages
     path = utilo.forward_slash(path)

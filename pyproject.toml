@@ -33,7 +33,7 @@ license-files = ["LICENSE"]
 dev = [
     # "hardcore>=0.8.1,<1.0.0",
     "hoverpower>=1.1.0,<2.0.0",
-    "utilotest>=1.0.3,<1.0.0",
+    "utilotest>=1.0.2,<2.0.0",
 ]
 
 [project.urls]
