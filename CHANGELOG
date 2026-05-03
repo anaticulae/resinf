@@ -1,6 +1,27 @@
 # CHANGELOG
 
 
+## v1.0.3 (2026-05-03)
+
+### Chores
+
+- **make**: Add decryption step
+  ([`694e12f`](https://github.com/anaticulae/resinf/commit/694e12ff38445fb45fb5211dbd7efde2d8411841))
+
+- **resources**: Upgrade resources
+  ([`052f0e1`](https://github.com/anaticulae/resinf/commit/052f0e13db3b34704d2f298e65580015e5840832))
+
+### Refactoring
+
+- **path**: Use new path package
+  ([`8393833`](https://github.com/anaticulae/resinf/commit/83938337890d759d5e32e25b8732b19ed445b2eb))
+
+### Testing
+
+- **docs**: Enable tests
+  ([`6c5d629`](https://github.com/anaticulae/resinf/commit/6c5d62986f2d2492da59a549b2ab77fc9d6754f1))
+
+
 ## v1.0.2 (2026-04-13)
 
 ### Chores
