@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.0.4 (2026-05-03)
+
+### Chores
+
+- **github**: Adjust docker workflow
+  ([`53fd02c`](https://github.com/anaticulae/resinf/commit/53fd02cdd61bb9db7b5a315edc39da42cab7cd7e))
+
+
 ## v1.0.3 (2026-05-03)
 
 ### Chores
