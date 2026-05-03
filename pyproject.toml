@@ -16,7 +16,7 @@ authors = [
 ]
 
 dependencies = [
-    "utilo>=2.107.3,<3.0.0",
+    "utilo>=2.107.5,<3.0.0",
 ]
 
 # Optional but recommended metadata
@@ -32,8 +32,8 @@ license-files = ["LICENSE"]
 [project.optional-dependencies]
 dev = [
     # "hardcore>=0.8.1,<1.0.0",
-    # "power>=2.20.1,<1.0.0",
-    # "utilotest>=0.24.3,<1.0.0",
+    "hoverpower>=1.1.0,<2.0.0",
+    "utilotest>=1.0.3,<1.0.0",
 ]
 
 [project.urls]
